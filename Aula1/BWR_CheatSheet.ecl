@@ -10,10 +10,10 @@ OUTPUT($.File_Housing.File);
 Mydef := 'Olá mundo';  // definicao do tipo "value"
 
 // Uma acao
-// OUTPUT('Olá mundo');
+ OUTPUT('Olá mundo');
  output(mydef);
 
-//*
+/*
 // *****
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
