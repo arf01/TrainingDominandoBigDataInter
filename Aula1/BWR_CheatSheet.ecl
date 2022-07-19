@@ -13,7 +13,7 @@ Mydef := 'Olá mundo';  // definicao do tipo "value"
  OUTPUT('Olá mundo');
  output(mydef);
 
-/*
+//*
 // *****
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
