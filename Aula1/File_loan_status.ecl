@@ -144,6 +144,6 @@ EXPORT File_loan_status := MODULE
         STRING debt_settlement_flag;
   END;
 
-  //EXPORT File2:=DATASET('~arf::loan_status_2007-2020q3.gzip',Layout2,CSV(HEADING(1)));
+  EXPORT File2:=DATASET('~arf::loan_status_2007-2020q3.gzip',Layout2,CSV(HEADING(1)));
  
 END;

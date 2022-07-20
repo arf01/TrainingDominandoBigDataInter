@@ -1,7 +1,7 @@
 ﻿IMPORT $;
 
 OUTPUT($.File_Housing.File);
-//UTPUT($.File_loan_status.File2);
+OUTPUT($.File_loan_status.File2);
 
 
 
