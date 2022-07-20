@@ -1,6 +1,6 @@
 EXPORT File_loan_status := MODULE
-  EXPORT Layout := RECORD
-		STRING field1;
+  EXPORT Layout2 := RECORD
+		    STRING field1;
         STRING id;
         STRING loan_amnt;
         STRING funded_amnt;
@@ -147,6 +147,6 @@ EXPORT File_loan_status := MODULE
 
   END;
 
-  //EXPORT File:=DATASET('~arf::loan_status_2007-2020q3.gzip',Layout,CSV(HEADING(1)));
+  //EXPORT File2:=DATASET('~arf::loan_status_2007-2020q3.gzip',Layout2,CSV(HEADING(1)));
  
 END;
