@@ -142,9 +142,6 @@ EXPORT File_loan_status := MODULE
         STRING hardship_payoff_balance_amount;
         STRING hardship_last_payment_amount;
         STRING debt_settlement_flag;
-    END;
-
-
   END;
 
   //EXPORT File2:=DATASET('~arf::loan_status_2007-2020q3.gzip',Layout2,CSV(HEADING(1)));
