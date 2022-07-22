@@ -153,5 +153,6 @@
     STRING loan_amnt;
     STRING funded_amnt;
     STRING funded_amnt_inv; //Dependent Variable - what we are trying to predict
+    STRING recoveries;
   END;  //*/// preciso decidir quais colunas entram
 END;
