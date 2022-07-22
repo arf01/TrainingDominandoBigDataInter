@@ -6,8 +6,8 @@ myTestData  := $.Prep02.myTestData;   //ok
 ML_Core.AppendSeqId(myTrainData,id2,myTrainIDData);   // adiciona o indice 1,2,3,4... depois da filtragem
 ML_Core.AppendSeqId(myTestData,id2,myTestIDData);
 //Numeric Field Matrix conversion
-ML_Core.ToField(myTrainIDData, myTrainDataNF);  // transforma matriz em vetor e vetorna os valores e os indices 1111,2222,3333,4444...
-ML_Core.ToField(myTestIDData, myTestDataNF);  // nao esta funcionando pois preciso converter para dados numericos
+//ML_Core.ToField(myTrainIDData, myTrainDataNF);  // transforma matriz em vetor e vetorna os valores e os indices 1111,2222,3333,4444...
+//ML_Core.ToField(myTestIDData, myTestDataNF);  // nao esta funcionando pois preciso converter para dados numericos
  OUTPUT(myTrainData, NAMED('TrainDataNF'));  //Uncomment to spot the Numeric Field Matrix conversion
  OUTPUT(myTestData, NAMED('TestDataNF'));  //Uncomment to spot the Numeric Field Matrix conversion
 /* <-- Delete the first forward slash (/) just before the asterisk (*) to comment out the entire MODULE
