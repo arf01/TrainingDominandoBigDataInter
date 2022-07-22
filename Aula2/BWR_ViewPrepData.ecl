@@ -1,7 +1,7 @@
 ﻿IMPORT $, DataPatterns;
 // Browse raw input data
-//OUTPUT($.File_Property.File,NAMED('Property'));
-//COUNT($.File_Property.File);
+OUTPUT($.File_Property.File,NAMED('Property'));
+COUNT($.File_Property.File);
 // Profiling the raw data
 // OUTPUT(DataPatterns.Profile($.File_Property.File,,,,,10));
 // OUTPUT(DataPatterns.Benford($.File_Property.File,'assessed_value, total_value'));

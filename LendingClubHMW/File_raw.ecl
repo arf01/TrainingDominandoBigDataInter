@@ -145,10 +145,13 @@
   END;
 
   EXPORT Dataset_raw := DATASET('~arf::loan_status_2007-2020q3.gzip',Layout,CSV(HEADING(1)));
+
+  //New record structure for training the property price model
+	EXPORT MLraw := RECORD
+    STRING field1;
+    STRING id;
+    STRING loan_amnt;
+    STRING funded_amnt;
+    STRING funded_amnt_inv; //Dependent Variable - what we are trying to predict
+  END;  //*/// preciso decidir quais colunas entram
 END;
-
-
-
-
-
-
