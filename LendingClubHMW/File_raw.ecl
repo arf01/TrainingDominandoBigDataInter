@@ -144,7 +144,7 @@
     STRING debt_settlement_flag;
   END;
 
-  EXPORT Dataset_raw := DATASET('~tarefa::lendingclub::hmw::loan_status_2007-2020q3.gzip',Layout,CSV(HEADING(1)));
+  EXPORT Dataset_raw := DATASET('~arf::loan_status_2007-2020q3.gzip',Layout,CSV(HEADING(1)));
 END;
 
 
