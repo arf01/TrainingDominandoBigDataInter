@@ -1,12 +1,12 @@
-﻿/*IMPORT $;
+﻿IMPORT $;
 
 //Dataset bruto
 FileRaw := $.File_raw.Dataset_raw;
 OUTPUT(FileRaw);
-COUNT(FileRaw); */
+COUNT(FileRaw); 
 
 
-IMPORT $, DataPatterns;
+IMPORT DataPatterns;
 // Browse raw input data
 OUTPUT($.File_raw.Dataset_raw,NAMED('FileRaw'));
 COUNT($.File_raw.Dataset_raw);
