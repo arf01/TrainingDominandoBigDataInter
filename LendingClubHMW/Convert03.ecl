@@ -1,4 +1,4 @@
-//IMPORT $;  //ok
+IMPORT $;  //ok
 IMPORT ML_Core;   //ok
 myTrainData := $.Prep02.myTrainData;  //ok
 myTestData  := $.Prep02.myTestData;   //ok
