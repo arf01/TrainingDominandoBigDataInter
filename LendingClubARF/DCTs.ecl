@@ -82,6 +82,14 @@ EXPORT DCTs := MODULE
     {'36 months', 1}, 
     {'60 months', 2}], {STRING3 m6,UNSIGNED1 mcode6});
 
+    EXPORT map_hardship_flag :=
+  dataset([
+    {'Y', 0}, 
+    {'N', 1}], {STRING3 m7,UNSIGNED1 mcode7});
+
+
+    
+
  
 	/*EXPORT Mth_DS :=
   dataset([
@@ -130,8 +138,11 @@ EXPORT mapcode_initial_list_status(STRING m4) := map4[m4].mcode4;
 EXPORT map5 := DICTIONARY(map_sub_grade,{m5 => mcode5});
 EXPORT mapcode_sub_grade(STRING m5) := map5[m5].mcode5;
 
-EXPORT map6 := DICTIONARY(map_terms,{m6 => mcode6});
-EXPORT mapcode_terms(STRING m6) := map6[m6].mcode6;
+EXPORT map6 := DICTIONARY(map_term,{m6 => mcode6});
+EXPORT mapcode_term(STRING m6) := map6[m6].mcode6;
+
+EXPORT map7 := DICTIONARY(map_hardship_flag,{m7 => mcode7});
+EXPORT mapcode_hardship_flag(STRING m7) := map7[m7].mcode7;
 
 
 

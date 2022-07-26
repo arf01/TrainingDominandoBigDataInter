@@ -9,7 +9,7 @@ EXPORT Prep01 := MODULE
     UNSIGNED4 rnd; // A random number
   END;  
   // Clean the data and assign a random number to each record
-  CleanFilter := raw.loan_amnt <> 0 AND raw.fico_range_low <> 0 AND raw.annual_inc >= 5000 AND raw.all_util <> 0;//AND raw.all_util <> 'all_util'; //AND raw.year_acquired <> 0 AND 
+  CleanFilter := raw.loan_amnt <> 0 AND raw.fico_range_low <> 0 AND raw.annual_inc >= 5000 AND raw.all_util <> 0 AND raw.hardship_flag <> 'Y';//AND raw.all_util <> 'all_util'; //AND raw.year_acquired <> 0 AND 
                  //raw.land_square_footage <> 0 AND raw.living_square_feet <> 0 AND 
                 // reaw.bedrooms <> 0 AND raw.year_Built <> 0; //preciso definir como as colunas vao ser filtradas
 
@@ -26,6 +26,9 @@ EXPORT Prep01 := MODULE
    SELF.initial_list_status_code  := $.DCTs.mapcode_initial_list_status(Le.initial_list_status); 
    SELF.sub_grade_code  := $.DCTs.mapcode_sub_grade(Le.sub_grade);
    SELF.term_code  := $.DCTs.mapcode_term(Le.term);
+   SELF.hardship_flag_code  := $.DCTs.mapcode_hardship_flag(Le.hardship_flag);
+
+
 
    //SELF.monthcode      := $.DCTs.MapMth2Code(Le.Month);  //exemplo
    SELF := Le;
