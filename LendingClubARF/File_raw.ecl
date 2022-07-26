@@ -294,7 +294,6 @@ END;
 
   //New record structure for training the property price model
 	EXPORT MLraw := RECORD
-    UNSIGNED4 RecID;
     //////////////////////
     UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
 		REAL8 annual_inc;    			//renda anual
@@ -305,19 +304,20 @@ END;
 		UNSIGNED1 tax_liens;      // numero de propriedades penhoradas para pagamento de impostos
 		UNSIGNED1 loan_status;
     //////////////////////////
-    UNSIGNED1 emp_title_code;
-    UNSIGNED1 acc_now_delinq_code;
-    UNSIGNED1 home_ownership_code1;
-    UNSIGNED1 emp_length_code;
-    UNSIGNED1 grade_code;
-    UNSIGNED1 home_ownership_code;
-    UNSIGNED1 initial_list_status_code;
-    UNSIGNED1 sub_grade_code;
-    UNSIGNED1 term_code;
-    UNSIGNED1 application_type_code; 
-    UNSIGNED1 purpose_code;
-    UNSIGNED1 verification_status_code;
-    UNSIGNED1 verification_status_joint_code;
+    UNSIGNED2 emp_title_code;
+    UNSIGNED2 acc_now_delinq_code;
+    UNSIGNED2 home_ownership_code1;
+    UNSIGNED2 emp_length_code;
+    UNSIGNED2 grade_code;
+    UNSIGNED2 home_ownership_code;
+    UNSIGNED2 initial_list_status_code;
+    UNSIGNED2 sub_grade_code;
+    UNSIGNED2 term_code;
+    UNSIGNED2 application_type_code; 
+    UNSIGNED2 purpose_code;
+    UNSIGNED2 verification_status_code;
+    UNSIGNED2 verification_status_joint_code;
+    
     
   END;  //*/// preciso decidir quais colunas entram
 END;

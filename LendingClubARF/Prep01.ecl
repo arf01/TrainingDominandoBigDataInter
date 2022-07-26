@@ -16,7 +16,6 @@ EXPORT Prep01 := MODULE
 
   MLrawExt ML_Clean(raw le, INTEGER Cnt) := TRANSFORM
    SELF.rnd            := RANDOM(); 
-   SELF.RecID          := Cnt;
    SELF.emp_title_code := (UNSIGNED1)IF(Le.emp_title = 'Unemployed' OR Le.emp_title = 'unemployed' OR Le.emp_title = 'Jobless' OR Le.emp_title = 'jobless' OR Le.emp_title = 'Unplaced' OR Le.emp_title = 'unplaced' OR Le.emp_title = '',0,1);       
    SELF.acc_now_delinq_code   := IF(Le.acc_now_delinq <> 0 ,0,1);    
    SELF.home_ownership_code1  := (UNSIGNED1)IF(Le.home_ownership = 'MORTGAGE' OR Le.home_ownership = 'ANY' ,0,1); 
@@ -30,7 +29,6 @@ EXPORT Prep01 := MODULE
    SELF.purpose_code  := $.DCTs.mapcode_purpose(Le.purpose);
    SELF.verification_status_code  := $.DCTs.mapcode_verification_status(Le.verification_status);
    SELF.verification_status_joint_code  := $.DCTs.mapcode_verification_status_joint(Le.verification_status_joint);
-
 
 
    //SELF.monthcode      := $.DCTs.MapMth2Code(Le.Month);  //exemplo

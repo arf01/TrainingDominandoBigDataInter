@@ -12,7 +12,7 @@ EXPORT DCTs := MODULE
     {'7 years', 7}, 
     {'8 years', 8}, 
     {'9 years', 9}, 
-    {'10+ years', 10}], {STRING3 m1,UNSIGNED1 mcode1});
+    {'10+ years', 10}], {STRING m1,UNSIGNED2 mcode1});
 
     EXPORT map_grade :=
   dataset([
@@ -22,7 +22,7 @@ EXPORT DCTs := MODULE
     {'D', 4}, 
     {'E', 5}, 
     {'F', 6}, 
-    {'G', 7}], {STRING3 m2,UNSIGNED1 mcode2});
+    {'G', 7}], {STRING m2,UNSIGNED2 mcode2});
 
     EXPORT map_home_ownership :=
   dataset([
@@ -31,12 +31,12 @@ EXPORT DCTs := MODULE
     {'OWN', 2}, 
     {'ANY', 3}, 
     {'OTHER', 4}, 
-    {'NONE', 5}], {STRING3 m3,UNSIGNED1 mcode3});
+    {'NONE', 5}], {STRING m3,UNSIGNED2 mcode3});
 
     EXPORT map_initial_list_status :=
     dataset([
     {'w', 1}, 
-    {'f', 2}], {STRING3 m4,UNSIGNED1 mcode4});
+    {'f', 2}], {STRING m4,UNSIGNED2 mcode4});
 
 
     EXPORT map_sub_grade :=
@@ -75,17 +75,17 @@ EXPORT DCTs := MODULE
     {'D5', 5}, 
     {'E5', 5}, 
     {'F5', 5}, 
-    {'G5', 5}], {STRING3 m5,UNSIGNED1 mcode5});
+    {'G5', 5}], {STRING m5,UNSIGNED2 mcode5});
 
     EXPORT map_term :=
     dataset([
     {'36 months', 1}, 
-    {'60 months', 2}], {STRING3 m6,UNSIGNED1 mcode6});
+    {'60 months', 2}], {STRING m6,UNSIGNED2 mcode6});
 
     EXPORT map_application_type :=
   dataset([
     {'Individual', 0}, 
-    {'Joint App', 1}], {STRING3 m7,UNSIGNED1 mcode7});
+    {'Joint App', 1}], {STRING m7,UNSIGNED2 mcode7});
 
     EXPORT map_purpose :=
   dataset([
@@ -102,20 +102,20 @@ EXPORT DCTs := MODULE
     {'moving', 11},
     {'wedding', 12},
     {'renewable_energy', 13},
-    {'educational', 14}], {STRING3 m8,UNSIGNED1 mcode8});
+    {'educational', 14}], {STRING m8,UNSIGNED2 mcode8});
 
     EXPORT map_verification_status :=
   dataset([
     {'Not Verified', 1}, 
     {'Source Verified', 2}, 
-    {'Verified', 3}], {STRING3 m9,UNSIGNED1 mcode9});
+    {'Verified', 3}], {STRING m9,UNSIGNED2 mcode9});
 
 
     EXPORT map_verification_status_joint :=
   dataset([
     {'Not Verified', 1}, 
     {'Source Verified', 2}, 
-    {'Verified', 3}], {STRING3 m10,UNSIGNED1 mcode10});
+    {'Verified', 3}], {STRING m10,UNSIGNED2 mcode10});
 
     
 

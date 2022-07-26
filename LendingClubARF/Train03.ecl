@@ -29,5 +29,5 @@ MyDeviance := LR.Deviance_Detail(YTest,MyScores);
 MyAIC := LR.Model_Deviance(MyDeviance,MyBeta);
 OUTPUT(MyAIC, NAMED('AIC'));
    
-
+//confusion accuracy vazio, tentar adicionar o recid novamente em file_raw e prep_1 e mudar de 20 pra 21 em convert02
    
