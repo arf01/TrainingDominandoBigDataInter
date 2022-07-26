@@ -9,13 +9,24 @@ EXPORT Prep01 := MODULE
     UNSIGNED4 rnd; // A random number
   END;  
   // Clean the data and assign a random number to each record
-  CleanFilter := raw.all_util <> 0 AND  raw.fico_range_low < 10000 AND raw.mort_acc > 0 AND raw.tax_liens > 0;//AND raw.all_util <> 'all_util'; //AND raw.year_acquired <> 0 AND 
+  CleanFilter := raw.loan_amnt <> 0 AND raw.fico_range_low <> 0 AND raw.annual_inc >= 5000 AND raw.all_util <> 0;//AND raw.all_util <> 'all_util'; //AND raw.year_acquired <> 0 AND 
                  //raw.land_square_footage <> 0 AND raw.living_square_feet <> 0 AND 
                 // reaw.bedrooms <> 0 AND raw.year_Built <> 0; //preciso definir como as colunas vao ser filtradas
-							 
-  EXPORT myDataE := PROJECT(raw(CleanFilter), TRANSFORM(MLrawExt, 
-                                                             SELF.rnd := RANDOM(),
-                                                             SELF := LEFT));
+
+
+  MLrawExt ML_Clean(raw le, INTEGER Cnt) := TRANSFORM
+   SELF.rnd            := RANDOM(); 
+   SELF.RecID          := Cnt;
+   SELF.emp_title_code := (UNSIGNED1)IF(Le.emp_title = 'Unemployed' OR Le.emp_title = 'unemployed' OR Le.emp_title = 'Jobless' OR Le.emp_title = 'jobless' OR Le.emp_title = 'Unplaced' OR Le.emp_title = 'unplaced' OR Le.emp_title = '',0,1);       
+   SELF.acc_now_delinq_code    := IF(Le.acc_now_delinq <> 0 ,0,1);    
+   SELF.home_ownership_code1    := (UNSIGNED1)IF(Le.home_ownership = 'MORTGAGE' OR Le.home_ownership = 'ANY' ,0,1); 
+   SELF.emp_length_code   := $.DCTs.mapcode_emp_length(Le.emp_length); 
+
+   //SELF.monthcode      := $.DCTs.MapMth2Code(Le.Month);  //exemplo
+   SELF := Le;
+  END;
+
+  EXPORT myDataE := PROJECT(raw(CleanFilter), ML_Clean(LEFT,COUNTER));
 //	*/		//preciso definir como as colunas vao ser filtradas
 
 

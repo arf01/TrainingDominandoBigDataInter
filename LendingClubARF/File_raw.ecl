@@ -294,6 +294,8 @@ END;
 
   //New record structure for training the property price model
 	EXPORT MLraw := RECORD
+    UNSIGNED4 RecID;
+    //////////////////////
     UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
 		REAL8 annual_inc;    			//renda anual
 		REAL4 dti;           			//razão entre pagamento mensal de dividas e renda mensal
@@ -302,5 +304,11 @@ END;
 		UNSIGNED1 mort_acc;       // numero de hipotecas
 		UNSIGNED1 tax_liens;      // numero de propriedades penhoradas para pagamento de impostos
 		UNSIGNED1 loan_status;
+    //////////////////////////
+    UNSIGNED1 emp_title_code;
+    UNSIGNED1 acc_now_delinq_code;
+    UNSIGNED1 home_ownership_code1;
+    UNSIGNED1 emp_length_code;
+    
   END;  //*/// preciso decidir quais colunas entram
 END;
