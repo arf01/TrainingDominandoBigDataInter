@@ -18,9 +18,14 @@ EXPORT Prep01 := MODULE
    SELF.rnd            := RANDOM(); 
    SELF.RecID          := Cnt;
    SELF.emp_title_code := (UNSIGNED1)IF(Le.emp_title = 'Unemployed' OR Le.emp_title = 'unemployed' OR Le.emp_title = 'Jobless' OR Le.emp_title = 'jobless' OR Le.emp_title = 'Unplaced' OR Le.emp_title = 'unplaced' OR Le.emp_title = '',0,1);       
-   SELF.acc_now_delinq_code    := IF(Le.acc_now_delinq <> 0 ,0,1);    
-   SELF.home_ownership_code1    := (UNSIGNED1)IF(Le.home_ownership = 'MORTGAGE' OR Le.home_ownership = 'ANY' ,0,1); 
-   SELF.emp_length_code   := $.DCTs.mapcode_emp_length(Le.emp_length); 
+   SELF.acc_now_delinq_code   := IF(Le.acc_now_delinq <> 0 ,0,1);    
+   SELF.home_ownership_code1  := (UNSIGNED1)IF(Le.home_ownership = 'MORTGAGE' OR Le.home_ownership = 'ANY' ,0,1); 
+   SELF.emp_length_code := $.DCTs.mapcode_emp_length(Le.emp_length); 
+   SELF.grade_code := $.DCTs.mapcode_grade(Le.grade); 
+   SELF.home_ownership_code  := $.DCTs.mapcode_home_ownership(Le.home_ownership); 
+   SELF.initial_list_status_code  := $.DCTs.mapcode_initial_list_status(Le.initial_list_status); 
+   SELF.sub_grade_code  := $.DCTs.mapcode_sub_grade(Le.sub_grade);
+   SELF.term_code  := $.DCTs.mapcode_term(Le.term);
 
    //SELF.monthcode      := $.DCTs.MapMth2Code(Le.Month);  //exemplo
    SELF := Le;

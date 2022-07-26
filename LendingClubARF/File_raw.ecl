@@ -309,6 +309,11 @@ END;
     UNSIGNED1 acc_now_delinq_code;
     UNSIGNED1 home_ownership_code1;
     UNSIGNED1 emp_length_code;
+    UNSIGNED1 grade_code;
+    UNSIGNED1 home_ownership_code;
+    UNSIGNED1 initial_list_status_code;
+    UNSIGNED1 sub_grade_code;
+    UNSIGNED1 term_code;
     
   END;  //*/// preciso decidir quais colunas entram
 END;
