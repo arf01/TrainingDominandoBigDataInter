@@ -26,7 +26,10 @@ EXPORT Prep01 := MODULE
    SELF.initial_list_status_code  := $.DCTs.mapcode_initial_list_status(Le.initial_list_status); 
    SELF.sub_grade_code  := $.DCTs.mapcode_sub_grade(Le.sub_grade);
    SELF.term_code  := $.DCTs.mapcode_term(Le.term);
-   SELF.hardship_flag_code  := $.DCTs.mapcode_hardship_flag(Le.hardship_flag);
+   SELF.application_type_code  := $.DCTs.mapcode_application_type(Le.application_type);
+   SELF.purpose_code  := $.DCTs.mapcode_purpose(Le.purpose);
+   SELF.verification_status_code  := $.DCTs.mapcode_verification_status(Le.verification_status);
+   SELF.verification_status_joint_code  := $.DCTs.mapcode_verification_status_joint(Le.verification_status_joint);
 
 
 

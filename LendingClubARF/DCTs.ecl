@@ -82,11 +82,40 @@ EXPORT DCTs := MODULE
     {'36 months', 1}, 
     {'60 months', 2}], {STRING3 m6,UNSIGNED1 mcode6});
 
-    EXPORT map_hardship_flag :=
+    EXPORT map_application_type :=
   dataset([
-    {'Y', 0}, 
-    {'N', 1}], {STRING3 m7,UNSIGNED1 mcode7});
+    {'Individual', 0}, 
+    {'Joint App', 1}], {STRING3 m7,UNSIGNED1 mcode7});
 
+    EXPORT map_purpose :=
+  dataset([
+    {'debt_consolidation', 1}, 
+    {'credit_card', 2}, 
+    {'home_improvement', 3}, 
+    {'other', 4}, 
+    {'major_purchase', 5}, 
+    {'medical', 6}, 
+    {'small_business', 7}, 
+    {'car', 8}, 
+    {'house', 9}, 
+    {'vacation', 10},
+    {'moving', 11},
+    {'wedding', 12},
+    {'renewable_energy', 13},
+    {'educational', 14}], {STRING3 m8,UNSIGNED1 mcode8});
+
+    EXPORT map_verification_status :=
+  dataset([
+    {'Not Verified', 1}, 
+    {'Source Verified', 2}, 
+    {'Verified', 3}], {STRING3 m9,UNSIGNED1 mcode9});
+
+
+    EXPORT map_verification_status_joint :=
+  dataset([
+    {'Not Verified', 1}, 
+    {'Source Verified', 2}, 
+    {'Verified', 3}], {STRING3 m10,UNSIGNED1 mcode10});
 
     
 
@@ -141,8 +170,17 @@ EXPORT mapcode_sub_grade(STRING m5) := map5[m5].mcode5;
 EXPORT map6 := DICTIONARY(map_term,{m6 => mcode6});
 EXPORT mapcode_term(STRING m6) := map6[m6].mcode6;
 
-EXPORT map7 := DICTIONARY(map_hardship_flag,{m7 => mcode7});
-EXPORT mapcode_hardship_flag(STRING m7) := map7[m7].mcode7;
+EXPORT map7 := DICTIONARY(map_application_type,{m7 => mcode7});
+EXPORT mapcode_application_type(STRING m7) := map7[m7].mcode7;
+
+EXPORT map8 := DICTIONARY(map_purpose,{m8 => mcode8});
+EXPORT mapcode_purpose(STRING m8) := map8[m8].mcode8;
+
+EXPORT map9 := DICTIONARY(map_verification_status,{m9 => mcode9});
+EXPORT mapcode_verification_status(STRING m9) := map9[m9].mcode9;
+
+EXPORT map10 := DICTIONARY(map_verification_status_joint,{m10 => mcode10});
+EXPORT mapcode_verification_status_joint(STRING m10) := map10[m10].mcode10;
 
 
 

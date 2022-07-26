@@ -314,7 +314,10 @@ END;
     UNSIGNED1 initial_list_status_code;
     UNSIGNED1 sub_grade_code;
     UNSIGNED1 term_code;
-    UNSIGNED1 hardship_flag_code; 
+    UNSIGNED1 application_type_code; 
+    UNSIGNED1 purpose_code;
+    UNSIGNED1 verification_status_code;
+    UNSIGNED1 verification_status_joint_code;
     
   END;  //*/// preciso decidir quais colunas entram
 END;
