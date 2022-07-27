@@ -295,14 +295,38 @@ END;
   //New record structure for training the property price model
 	EXPORT MLraw := RECORD
     //////////////////////
-    UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
-		REAL8 annual_inc;    			//renda anual
-		REAL4 dti;           			//razão entre pagamento mensal de dividas e renda mensal
+    REAL funded_amnt_inv;
+    REAL installment;
+    REAL out_prncp;
+    REAL out_prncp_inv;
+    REAL total_pymnt;
+    REAL total_pymnt_inv;
+    REAL total_rec_prncp;
+    REAL total_rec_int;
+    REAL total_rec_late_fee;
+    REAL recoveries;
+    REAL collection_recovery_fee;
+    REAL last_pymnt_amnt;
+    REAL annual_inc_joint;
+    REAL dti_joint;
+    REAL bc_util;
+    REAL pct_tl_nvr_dlq;
+    REAL percent_bc_gt_75;
+    REAL sec_app_revol_util;
+    REAL hardship_amount;
+    REAL orig_projected_additional_accrued_interest;
+    REAL hardship_payoff_balance_amount;
+    REAL hardship_last_payment_amount;
+
+
+		REAL annual_inc;    			//renda anual
+		REAL dti;           			//razão entre pagamento mensal de dividas e renda mensal
 		UNSIGNED2 fico_range_low; // Score de credito do individuo
 		UNSIGNED3 loan_amnt;      // valor do emprestimo
 		UNSIGNED1 mort_acc;       // numero de hipotecas
 		UNSIGNED1 tax_liens;      // numero de propriedades penhoradas para pagamento de impostos
 		UNSIGNED1 loan_status;
+    UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
     //////////////////////////
     UNSIGNED2 emp_title_code;
     UNSIGNED2 acc_now_delinq_code;
