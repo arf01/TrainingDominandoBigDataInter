@@ -295,52 +295,53 @@ END;
   //New record structure for training the property price model
 	EXPORT MLraw := RECORD
     //////////////////////
-    REAL funded_amnt_inv;
-    REAL installment;
-    REAL out_prncp;
-    REAL out_prncp_inv;
-    REAL total_pymnt;
-    REAL total_pymnt_inv;
-    REAL total_rec_prncp;
-    REAL total_rec_int;
-    REAL total_rec_late_fee;
-    REAL recoveries;
-    REAL collection_recovery_fee;
-    REAL last_pymnt_amnt;
-    REAL annual_inc_joint;
-    REAL dti_joint;
-    REAL bc_util;
-    REAL pct_tl_nvr_dlq;
-    REAL percent_bc_gt_75;
-    REAL sec_app_revol_util;
-    REAL hardship_amount;
-    REAL orig_projected_additional_accrued_interest;
-    REAL hardship_payoff_balance_amount;
-    REAL hardship_last_payment_amount;
+    //REAL funded_amnt_inv;  //rodou
+    //REAL installment;   ///////////////////////////////s
+    //REAL out_prncp;    //////xxxxx
+    //REAL out_prncp_inv;   ///////////xxxxxx
+    //REAL total_pymnt;      ///////////xxxx
+    //REAL total_pymnt_inv;   //////xxxxx
+    //REAL total_rec_prncp;    ///////////xxxx
+    //REAL total_rec_int;     ///xxxxxxxx
+    //REAL total_rec_late_fee;   /////////xxxxxxxx
+    //REAL recoveries;  ////////xxxxxxxxxxxxx
+    //REAL collection_recovery_fee;   ////////////xxxxxxx
+    //REAL last_pymnt_amnt;  //////xxxxxxxx
+    //REAL annual_inc_joint;      ///xxxxxxxxxxxxxxxx
+    //REAL dti_joint;   ////XXXXXXXXXXX
+    //REAL bc_util;        /////XXXXXXX
+    REAL pct_tl_nvr_dlq;     ///////////rodou
+    //REAL percent_bc_gt_75;
+    //REAL sec_app_revol_util;
+    //REAL hardship_amount;
+    //REAL orig_projected_additional_accrued_interest;
+    //REAL hardship_payoff_balance_amount;
+    //REAL hardship_last_payment_amount;
 
-
+    
 		REAL annual_inc;    			//renda anual
 		REAL dti;           			//razão entre pagamento mensal de dividas e renda mensal
 		UNSIGNED2 fico_range_low; // Score de credito do individuo
 		UNSIGNED3 loan_amnt;      // valor do emprestimo
 		UNSIGNED1 mort_acc;       // numero de hipotecas
 		UNSIGNED1 tax_liens;      // numero de propriedades penhoradas para pagamento de impostos
-		UNSIGNED1 loan_status;
+		
     UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
     //////////////////////////
-    UNSIGNED2 emp_title_code;
-    UNSIGNED2 acc_now_delinq_code;
-    UNSIGNED2 home_ownership_code1;
-    UNSIGNED2 emp_length_code;
-    UNSIGNED2 grade_code;
-    UNSIGNED2 home_ownership_code;
-    UNSIGNED2 initial_list_status_code;
-    UNSIGNED2 sub_grade_code;
-    UNSIGNED2 term_code;
-    UNSIGNED2 application_type_code; 
-    UNSIGNED2 purpose_code;
-    UNSIGNED2 verification_status_code;
-    UNSIGNED2 verification_status_joint_code;
+   // UNSIGNED2 emp_title_code;   //ns
+   // UNSIGNED2 acc_now_delinq_code;  //n
+   // UNSIGNED2 home_ownership_code1;   //n
+   // UNSIGNED2 emp_length_code;   //n
+   //UNSIGNED2 grade_code;   //sn
+   // UNSIGNED2 home_ownership_code;  //n
+   // UNSIGNED2 initial_list_status_code;   //sn
+  //UNSIGNED2 sub_grade_code; //n
+  //  UNSIGNED2 term_code;  //n
+   // UNSIGNED2 application_type_code; //n
+   // UNSIGNED2 purpose_code;  //n
+   // UNSIGNED2 verification_status_code;  //n
+   // UNSIGNED2 verification_status_joint_code;  //n
+    UNSIGNED1 loan_status;
     
     
   END;  //*/// preciso decidir quais colunas entram

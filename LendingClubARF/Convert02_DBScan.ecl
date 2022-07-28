@@ -2,7 +2,7 @@ IMPORT $;
 IMPORT ML_Core;
 myTrainData := $.Prep01.myTrainData;
 //Add a sequential ID
-ML_Core.AppendSeqId(myTrainData,recid,myTrainIDData); 
+ML_Core.AppendSeqId(myTrainData,id,myTrainIDData); 
 //OUTPUT(myTrainIDData, NAMED('TrainDataID'));  //Uncomment to spot the sequential recid field created
 //Numeric Field Matrix conversion
 ML_Core.ToField(myTrainIDData, myTrainIDDataNF);
