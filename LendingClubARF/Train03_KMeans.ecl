@@ -4,7 +4,7 @@ IMPORT $;
 IMPORT ML_Core;
 IMPORT KMeans;
 //Training Data
-TrainAttr := $.Convert02.myTrainAttrNF;
+TrainAttr := $.Convert02_DBScan.myTrainAttrNF;
 //Initial centroids
 //Remember to update the values in the SET according to your previous DBSCAN run
 Centroids := TrainAttr(id IN [3,116,591,2036,2299]);
