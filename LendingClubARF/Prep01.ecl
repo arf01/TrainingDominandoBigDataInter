@@ -9,7 +9,7 @@ EXPORT Prep01 := MODULE
     UNSIGNED4 rnd; // A random number
   END;  
   // Clean the data and assign a random number to each record
-  CleanFilter := raw.loan_amnt > 0 AND raw.fico_range_low <> 0  AND raw.total_rec_late_fee < 100 AND raw.out_prncp =0 AND raw.out_prncp_inv =0 AND raw.pct_tl_nvr_dlq= 0 AND raw.mort_acc=0  AND raw.tax_liens =0  and raw.all_util =0 AND raw.annual_inc >= 12000 AND raw.installment > 0 AND raw.fico_range_low >=640 AND raw.hardship_flag <> 'Y' and raw.funded_amnt_inv >=1000 AND raw.funded_amnt_inv<=100000 AND raw.total_pymnt < raw.loan_amnt ;
+  CleanFilter := raw.loan_amnt > 0 AND raw.fico_range_low <> 0  AND raw.total_rec_late_fee < 100 AND raw.out_prncp =0 AND raw.out_prncp_inv =0 AND raw.pct_tl_nvr_dlq= 0 AND raw.mort_acc=0  AND raw.tax_liens =0  and raw.all_util =0 AND raw.annual_inc >= 12000 AND raw.installment > 0  AND raw.total_pymnt < raw.loan_amnt AND raw.fico_range_low >=640 AND raw.hardship_flag <> 'Y' and raw.funded_amnt_inv >=1000 AND raw.funded_amnt_inv<=100000 ;
   
   MLrawExt ML_Clean(raw le, INTEGER Cnt) := TRANSFORM
    SELF.rnd            := RANDOM(); 

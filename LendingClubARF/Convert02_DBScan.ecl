@@ -30,7 +30,7 @@ EXPORT Convert02_DBScan := MODULE
 		SELF.last_pymnt_amnt             := fSTD(Le.last_pymnt_amnt,12);
 		//ELF.annual_inc_joint           := fSTD(Le.annual_inc_joint,13);
 	//	SELF.dti_joint := fSTD(Le.dti_joint,14);
-	//  SELF.bc_util             := fSTD(Le.bc_util,15);
+	    SELF.bc_util             := fSTD(Le.bc_util,15);
 		SELF.pct_tl_nvr_dlq        := fSTD(Le.pct_tl_nvr_dlq,16);
 	//	SELF.percent_bc_gt_75       := fSTD(Le.percent_bc_gt_75,17);
 	//	SELF.sec_app_revol_util              := fSTD(Le.sec_app_revol_util,18);
@@ -48,7 +48,7 @@ EXPORT Convert02_DBScan := MODULE
   //Numeric Field Matrix conversion for standardized values
 	ML_Core.ToField(myTrainDataSTD,myTrainDataSTDNF);
 	
-  //We have 10 numeric attributes for clustering  
-	EXPORT myTrainAttrNF := myTrainDataSTDNF(number < 10);
+  //We have 11 numeric attributes for clustering  
+	EXPORT myTrainAttrNF := myTrainDataSTDNF(number < 11);
 END;
 // */
