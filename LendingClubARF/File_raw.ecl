@@ -295,8 +295,8 @@ END;
   //New record structure for training the property price model
 	EXPORT MLraw := RECORD
     //////////////////////
-    //REAL funded_amnt_inv;  //rodou
-    //REAL installment;   ///////////////////////////////s
+    REAL funded_amnt_inv;  //rodou
+    REAL installment;   ///////////////////////////////s
     //REAL out_prncp;    //////xxxxx
     //REAL out_prncp_inv;   ///////////xxxxxx
     //REAL total_pymnt;      ///////////xxxx
@@ -311,12 +311,12 @@ END;
     //REAL dti_joint;   ////XXXXXXXXXXX
     //REAL bc_util;        /////XXXXXXX
     REAL pct_tl_nvr_dlq;     ///////////rodou
-    //REAL percent_bc_gt_75;
-    //REAL sec_app_revol_util;
-    //REAL hardship_amount;
-    //REAL orig_projected_additional_accrued_interest;
-    //REAL hardship_payoff_balance_amount;
-    //REAL hardship_last_payment_amount;
+    //REAL percent_bc_gt_75;  /////xxxxxxx
+    //REAL sec_app_revol_util;     /////xxxxxxx
+    //REAL hardship_amount;   ///////xxxx
+    //REAL orig_projected_additional_accrued_interest; //////xxxxxx
+    //REAL hardship_payoff_balance_amount;   //////////xxxxxx
+    //REAL hardship_last_payment_amount;   /////xxxxxxx
 
     
 		REAL annual_inc;    			//renda anual
@@ -328,19 +328,19 @@ END;
 		
     UNSIGNED2 all_util;  			//razão entre saldo e limite de crédito
     //////////////////////////
-   // UNSIGNED2 emp_title_code;   //ns
-   // UNSIGNED2 acc_now_delinq_code;  //n
-   // UNSIGNED2 home_ownership_code1;   //n
-   // UNSIGNED2 emp_length_code;   //n
-   //UNSIGNED2 grade_code;   //sn
-   // UNSIGNED2 home_ownership_code;  //n
-   // UNSIGNED2 initial_list_status_code;   //sn
-  //UNSIGNED2 sub_grade_code; //n
-  //  UNSIGNED2 term_code;  //n
-   // UNSIGNED2 application_type_code; //n
-   // UNSIGNED2 purpose_code;  //n
-   // UNSIGNED2 verification_status_code;  //n
-   // UNSIGNED2 verification_status_joint_code;  //n
+    //UNSIGNED2 emp_title_code;   //ns
+    //UNSIGNED2 acc_now_delinq_code;  //n
+    //UNSIGNED2 home_ownership_code1;   //n
+    //UNSIGNED2 emp_length_code;   //n
+    //UNSIGNED2 grade_code;   //sn
+    //UNSIGNED2 home_ownership_code;  //n
+    //UNSIGNED2 initial_list_status_code;   //sn
+    //UNSIGNED2 sub_grade_code; //n
+    //UNSIGNED2 term_code;  //n
+    //UNSIGNED2 application_type_code; //n
+    //UNSIGNED2 purpose_code;  //n
+    //UNSIGNED2 verification_status_code;  //n
+    //UNSIGNED2 verification_status_joint_code;  //n
     UNSIGNED1 loan_status;
     
     

@@ -1,13 +1,16 @@
 ﻿IMPORT $;
 Import ML_Core;
 
-//Dataset bruto
+
+//ataset bruto
 FileRaw := $.File_raw.Dataset_optimized;
 //OUTPUT(FileRaw);
 //COUNT(FileRaw); 
 
 
 IMPORT DataPatterns;
+
+
 // Browse raw input data
 //OUTPUT($.File_raw.Dataset_optimized,NAMED('FileRaw'));
 //COUNT($.File_raw.Dataset_optimized);
