@@ -297,15 +297,15 @@ END;
     //////////////////////
     REAL funded_amnt_inv;  //rodou
     REAL installment;   ///////////////////////////////s
-    //REAL out_prncp;    //////xxxxx
-    //REAL out_prncp_inv;   ///////////xxxxxx
+    REAL out_prncp;    //////xxxxx
+    REAL out_prncp_inv;   ///////////xxxxxx
     //REAL total_pymnt;      ///////////xxxx
     //REAL total_pymnt_inv;   //////xxxxx
     //REAL total_rec_prncp;    ///////////xxxx
     //REAL total_rec_int;     ///xxxxxxxx
-    //REAL total_rec_late_fee;   /////////xxxxxxxx
+    REAL total_rec_late_fee;   /////////xxxxxxxx
     //REAL recoveries;  ////////xxxxxxxxxxxxx
-    //REAL collection_recovery_fee;   ////////////xxxxxxx
+    REAL collection_recovery_fee;   ////////////xxxxxxx
     //REAL last_pymnt_amnt;  //////xxxxxxxx
     //REAL annual_inc_joint;      ///xxxxxxxxxxxxxxxx
     //REAL dti_joint;   ////XXXXXXXXXXX
